@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 import { data } from '../../apis/card'
+import ProductCard,{ ProductCard2} from '../component/ProductCard';
 
 
 const productos = [
@@ -32,6 +33,16 @@ function HomePage() {
                         </Card>
                     </Grid>
                 ))}
+                <ProductCard
+                    product={{
+                        title: 'Producto de ejemplo',
+                        image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+                        description: 'Descripción del producto de ejemplo',
+                        price: 19.99,
+                        stock: 10,
+                    }}
+                />
+                <ProductCard2></ProductCard2>
             </Grid>
         </div>
     );
