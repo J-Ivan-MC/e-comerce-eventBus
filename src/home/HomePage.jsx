@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 import ProductCard from '../component/ProductCard';
 import { products, addToCart, minusItem, plusItem, getTotal } from '../../apis/service';
+import Cart from "../component/Cart/Cart"
 
 function HomePage() {
     return (
@@ -18,10 +19,12 @@ function HomePage() {
                             image: product.image,
                             description: product.description,
                             price: product.price,
+                            quantity: product.quantity
                         }}
                     />
                 ))}
             </Grid>
+            <Cart/>
         </div>
     );
 }

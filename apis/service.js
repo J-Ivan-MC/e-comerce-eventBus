@@ -1,4 +1,5 @@
 export let cart = [];
+
 export let products = [
     {id: 1, name: "Apple", image: "https://www.applesfromny.com/wp-content/uploads/2020/05/Jonagold_NYAS-Apples2.png", price: 10, quantity: 1, description: " new description"},
     {id: 2, name: "Orange", image: "https://5.imimg.com/data5/VN/YP/MY-33296037/orange-600x600-500x500.jpg", price: 11, quantity: 1, description: " new description"},
@@ -6,13 +7,18 @@ export let products = [
 ]
 
 export function addToCart (product) {
+    console.log("This ",product);
     for(let item of cart) {
-            if(item.id === product.id) {
-                product.quantity += 1
-                cart = cart;
-                return;
-            }
+        if(item.id === product.id) {
+            product.quantity += 1
+            console.log("Step1");
+            cart = cart;
+            console.log(cart);
+            return;
+        }
     }
+    console.log("Step2");
+    console.log(cart);
     cart = [...cart, product]
 }
 

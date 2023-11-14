@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { products, addToCart, minusItem, plusItem, getTotal } from '../../apis/service';
 
 function ProductCard({ product }) {
-  const { id , title, image, description, price } = product;
+  const { id , title, image, description, price , quantity} = product;
 
   const handleAddToCart = () => {
     addToCart(product);
